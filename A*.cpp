@@ -202,16 +202,16 @@ void dijkstra(int traverse)
              if (isvalid(binary,val.x+i1,val.y+j1)==1)
              {
                 if (i1 % 2 == 1 && j1 % 2 == 1)
-		            mini = dist[val.x][val.y] + sqrt(2.0);
-		        else
+		    mini = dist[val.x][val.y] + sqrt(2.0);
+		else
                	    mini = dist[val.x][val.y] + 1;
-	             if (mini < dist[val.x + i1][val.y + j1])
-	                 {
-	                     double gn=sqrt(i1*i1 + j1*j1);
-		                 dist[val.x + i1][val.y + j1] = mini + gn;
-                         pt[val.x + i1][val.y + j1].x = val.x;
-		                 pt[val.x + i1][val.y + j1].y = val.y;
-		             }
+	        if (mini < dist[val.x + i1][val.y + j1])
+	              {
+	                    double gn=sqrt(i1*i1 + j1*j1);
+		            dist[val.x + i1][val.y + j1] = mini + gn;
+                            pt[val.x + i1][val.y + j1].x = val.x;
+		            pt[val.x + i1][val.y + j1].y = val.y;
+		      }
              }
           }
        }
